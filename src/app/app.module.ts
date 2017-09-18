@@ -5,12 +5,18 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { JeopardyService } from './jeopardy.service';
 import { ScoreBoardComponent } from './score-board/score-board.component';
+import { SeinfeldComponent } from './seinfeld/seinfeld.component';
+import { HarrisonFordComponent } from './harrison-ford/harrison-ford.component';
+import { CartoonsComponent } from './cartoons/cartoons.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScoreBoardComponent
+    ScoreBoardComponent,
+    SeinfeldComponent,
+    HarrisonFordComponent,
+    CartoonsComponent
   ],
   imports: [
     BrowserModule,

@@ -27,6 +27,9 @@ export class AppComponent implements OnInit {
     let harrisonFord: string = "http://jservice.io/api/clues?count=5&category=7835";
     let looneyTunes: string = "http://jservice.io/api/clues?count=5&category=360";
     // console.log(seinfeld);
+    for(let i = 0; i<5; i++) {
+      
+    }
     this.getDataFromService(seinfeld);
 
 
