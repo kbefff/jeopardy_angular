@@ -12,8 +12,9 @@ export class AppComponent implements OnInit {
 
   constructor(private jeopardyService: JeopardyService) {}
 
-  getDataFromService() {
-    this.jeopardyService.getQuestionInfo()
+  getDataFromService(category) {
+    console.log(category);
+    this.jeopardyService.getQuestionInfo(category)
       .subscribe(//like then in a promise
         questionInfo => {
           this.questionInfo = questionInfo[0];
@@ -22,7 +23,12 @@ export class AppComponent implements OnInit {
     }
 
   ngOnInit(){
-    this.getDataFromService();
+    let seinfeld: string = "http://jservice.io/api/clues?count=5&category=12050";
+    let harrisonFord: string = "http://jservice.io/api/clues?count=5&category=7835";
+    let looneyTunes: string = "http://jservice.io/api/clues?count=5&category=360";
+    // console.log(seinfeld);
+    this.getDataFromService(seinfeld);
+
 
   }
   
