@@ -31,4 +31,4 @@ export class ScoreBoardComponent implements OnInit {
 
 }
 
-}
+
