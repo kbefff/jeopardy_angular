@@ -39,3 +39,37 @@
   font-size: 45px;
 }
 
+
+
+h4.uppercase {
+  text-transform: uppercase;
+  color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+h1 {
+   display: flex;
+   justify-content: center;
+
+}
+
+.category {
+   display: flex;
+   justify-content: center;
+
+}
+
+  .answer {
+  display: flex;
+  justify-content: center;
+  }
+
+  .points {
+    display: flex;
+    justify-content: center;
+  }

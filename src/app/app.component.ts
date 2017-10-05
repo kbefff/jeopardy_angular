@@ -8,31 +8,27 @@ import { JeopardyService } from './jeopardy.service';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  questionInfo;
+  
 
-  constructor(private jeopardyService: JeopardyService) {}
+ questionInfo;
+ 
 
-  getDataFromService(category) {
-    console.log(category);
-    this.jeopardyService.getQuestionInfo(category)
-      .subscribe(//like then in a promise
+  constructor(private jeopardyService: JeopardyService){}
+
+    getDataFromService(){
+      this.jeopardyService.getQuestionInfo()
+      .subscribe(
         questionInfo => {
           this.questionInfo = questionInfo[0];
-          }
-        )
+          console.log(this.questionInfo.answer)
+        }
+      )
     }
 
   ngOnInit(){
-    let seinfeld: string = "http://jservice.io/api/clues?count=5&category=12050";
-    let harrisonFord: string = "http://jservice.io/api/clues?count=5&category=7835";
-    let looneyTunes: string = "http://jservice.io/api/clues?count=5&category=360";
-    // console.log(seinfeld);
-    for(let i = 0; i<5; i++) {
-      
-    }
-    this.getDataFromService(seinfeld);
-
-
+    this.getDataFromService()
   }
-  
+
+
+
 }

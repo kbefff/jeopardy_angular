@@ -1,0 +1,17 @@
+
+
+
+ 
+<form #answerForm="ngForm">
+Answer: <input type="text" id="answerValue" name="answerValue" value="" [(ngModel)]="answerValue">
+<button class="btn btn-default" (click)="onSubmit()">Submit</button>
+</form>
+<br>
+<div class="score">
+Score: {{score}}
+
+<br>
+<div *ngIf="this.isCorrect==true">Correct!</div>
+<div *ngIf="this.isCorrect==false">Wrong!</div> 
+
+  </div>
